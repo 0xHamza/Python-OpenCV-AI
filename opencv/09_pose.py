@@ -1,4 +1,11 @@
-"""Human facial landmark detector based on Convolutional Neural Network."""
+"""
+Soruce: https://towardsdatascience.com/real-time-head-pose-estimation-in-python-e52db1bc606a
+
+Different Source: 
+    https://learnopencv.com/head-pose-estimation-using-opencv-and-dlib/
+    https://yinguobing.com/facial-landmark-localization-by-deep-learning-background/
+
+Human facial landmark detector based on Convolutional Neural Network."""
 import cv2
 import numpy as np
 import tensorflow as tf
@@ -10,8 +17,8 @@ class FaceDetector:
     """Detect human face from image"""
 
     def __init__(self,
-                 dnn_proto_text='models/deploy.prototxt',
-                 dnn_model='models/res10_300x300_ssd_iter_140000.caffemodel'):
+                 dnn_proto_text='opencv/models/deploy.prototxt',
+                 dnn_model='opencv/models/res10_300x300_ssd_iter_140000.caffemodel'):
         """Initialization"""
         self.face_net = cv2.dnn.readNetFromCaffe(dnn_proto_text, dnn_model)
         self.detection_result = None
@@ -64,7 +71,7 @@ class FaceDetector:
 class MarkDetector:
     """Facial landmark detector by Convolutional Neural Network"""
 
-    def __init__(self, saved_model='models/pose_model'):
+    def __init__(self, saved_model='opencv/models/pose_model/'):
         """Initialization"""
         # A face detector is required for mark detection.
         self.face_detector = FaceDetector()
