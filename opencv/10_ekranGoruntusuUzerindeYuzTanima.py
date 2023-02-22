@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 
-face_cascade = cv2.CascadeClassifier('opencv\data\haarcascades\haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('data\haarcascades\haarcascade_frontalface_default.xml')
 
 
 import mss

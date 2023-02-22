@@ -7,7 +7,7 @@ from math import atan2, cos, sin, sqrt, pi
 import numpy as np
  
 # Load the image
-image = cv.imread("opencv/data/hamza/profil.png")
+image = cv.imread("data/hamza/profil.png")
 
 
 def predict(img):

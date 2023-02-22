@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # yüz tanıma algoritmasının eğitilmiş modeli
-face_cascade = cv2.CascadeClassifier('opencv\data\haarcascades\haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('opencv\data\haarcascades\haarcascade_eye.xml')
+face_cascade = cv2.CascadeClassifier('data\haarcascades\haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('data\haarcascades\haarcascade_eye.xml')
 
 def drawTick(img,x,y,w,h):
     cv2.line(img, (x, y+(h//2)), (x+(w//2),y+h), (255,255,0), 2)
@@ -73,7 +73,7 @@ def videodanAlgila():
     cv2.destroyAllWindows()
 
 # resim dosyasının yolu
-image_path = "opencv/data/hamza/profil.png"
+image_path = "data/hamza/profil.png"
 
 # RESIMDEN ALGILAMA
 resimdenAlgila(image_path)

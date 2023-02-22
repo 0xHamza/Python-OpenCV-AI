@@ -2,7 +2,7 @@ import cv2 as cv,cv2
 import numpy as np 
 
 # Read image
-img = cv2.imread('opencv/data/hamza/profil.png')
+img = cv2.imread('data/hamza/profil.png')
   
 # Convert the img to grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

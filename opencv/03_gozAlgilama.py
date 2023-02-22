@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # yüz tanıma algoritmasının eğitilmiş modeli
-eye_cascade = cv2.CascadeClassifier('opencv\data\haarcascades\haarcascade_eye.xml')
+eye_cascade = cv2.CascadeClassifier('data\haarcascades\haarcascade_eye.xml')
 
 
 def resimdenAlgila(path):
@@ -62,7 +62,7 @@ def videodanAlgila():
     cv2.destroyAllWindows()
 
 # resim dosyasının yolu
-image_path = "opencv/data/hamza/profil.png"
+image_path = "data/hamza/profil.png"
 
 # RESIMDEN ALGILAMA
 resimdenAlgila(image_path)

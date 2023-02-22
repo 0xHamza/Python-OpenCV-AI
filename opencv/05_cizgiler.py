@@ -2,7 +2,7 @@
 import cv2 
    
 # path 
-path = 'opencv\data\images\geeks14.png'
+path = 'data\images\geeks14.png'
    
 # Reading an image in grayscale mode
 image = cv2.imread(path, 0)
