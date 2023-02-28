@@ -25,6 +25,18 @@ blur = cv.blur(img, (5,5))
 # Ayna görüntüsü oluşturma
 flip = cv.flip(img, 1)
 
+# Gauss filtresi uygula
+img_blur = cv.GaussianBlur(img, (5, 5), 0)
+
+# Medyan Filtresi uygula
+median = cv.medianBlur(img, 5)
+
+# Görüntüleri göster
+cv.imshow("Medyan Filtresi Sonrası Görüntü", median)
+
+# İki resmi yan yana göster
+img_concat = np.concatenate((img, img_blur), axis=1)
+cv.imshow("Original vs. Blurred", img_concat)
 cv.imshow('orjinal',img)
 cv.imshow('gray',gray)
 cv.imshow('edges',edges)
