@@ -5,3 +5,5 @@
 /caffe
 /tensorflow
 /.gitignore
+/data/dataset/1_hamza
+/data/hamza
